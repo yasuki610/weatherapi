@@ -3,12 +3,13 @@ import json
 import csv
 import paramiko
 import pandas as pd
+import os
 
-HOST = 'mcdycxw5tclcknqqjyn2kxdm8w-4.ftp.marketingcloudops.com'
-PORT = 22
-USERNAME = "7315027"
-PASSWORD = "isiddmg2018#"
-remote_file = "/Import/weather_20181213.csv"
+HOST = os.environ["HOST"]
+PORT = os.environ["PORT"]
+USERNAME = os.environ["USERNAME"]
+PASSWORD = os.environ["PASSWORD"]
+remote_file = "/Import/weather.csv"
  
 def sftp_upload(csvlist, remote_file):
     try:

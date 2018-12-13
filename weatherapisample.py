@@ -6,9 +6,14 @@ import pandas as pd
 import os
 
 HOST = os.environ["HOST"]
-PORT = os.environ["PORT"]
+PORT = 22
 USERNAME = os.environ["USERNAME"]
 PASSWORD = os.environ["PASSWORD"]
+print(HOST)
+print(PORT)
+print(USERNAME)
+print(PASSWORD)
+
 remote_file = "/Import/weather.csv"
  
 def sftp_upload(csvlist, remote_file):
